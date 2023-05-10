@@ -3,7 +3,7 @@
 import * as React from "react";
 import {serverAction} from "./serverAction";
 
-export const Button = () => {
+export const ButtonServerAction = () => {
   return <button onClick={async () => {
     alert(await serverAction())
   }}>Run Server Action</button>;

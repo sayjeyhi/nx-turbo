@@ -13,8 +13,10 @@ const nextConfig = {
     svgr: false,
   },
 
+  reactStrictMode: true,
+  transpilePackages: ["@test-nx-next/ui"],
   experimental: {
-    appDir: true,
+    serverActions: true,
   },
 };
 
