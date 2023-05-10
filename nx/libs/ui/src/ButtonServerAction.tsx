@@ -3,8 +3,14 @@
 import * as React from "react";
 import {serverAction} from "./serverAction";
 
-export const ButtonServerAction = () => {
-  return <button onClick={async () => {
-    alert(await serverAction())
-  }}>Run Server Action</button>;
+export default function ButtonServerAction() {
+  return <button
+    className="test"
+    onClick={async () => {
+      alert(await serverAction())
+    }}
+  >
+    Run Server Action
+  </button>;
 };
+

@@ -14,7 +14,7 @@ const nextConfig = {
   },
 
   reactStrictMode: true,
-  transpilePackages: ["@test-nx-next/ui"],
+  // transpilePackages: ["@test-nx-next/ui"],
   experimental: {
     serverActions: true,
   },
