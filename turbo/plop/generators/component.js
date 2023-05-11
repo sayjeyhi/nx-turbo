@@ -1,11 +1,11 @@
 const fs = require('fs');
-const checkboxPlus = require('inquirer-checkbox-plus-prompt');
+// const checkboxPlus = require('inquirer-checkbox-plus-prompt');
 const getImports = require('../utils/get-imports');
 const { isEmpty } = require('validator');
 
 module.exports = (plop) => {
   plop.load('../helpers/importList.js');
-  plop.setPrompt('checkbox-plus', checkboxPlus);
+  // plop.setPrompt('checkbox-plus', checkboxPlus);
 
   plop.setGenerator('component', {
     description: 'Create a new component',

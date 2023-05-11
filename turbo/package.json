@@ -21,6 +21,9 @@
   ],
   "dependencies": {
     "enquirer": "^2.3.6",
-    "plop-action-copy": "^1.1.0"
+    "glob": "^10.2.3",
+    "inquirer-checkbox-plus-prompt": "^1.4.2",
+    "plop-action-copy": "^1.1.0",
+    "validator": "^13.9.0"
   }
 }
