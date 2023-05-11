@@ -1,0 +1,11 @@
+{{>importList}}
+
+Interface {{ properCase name }}Props {
+  className?: string;
+}
+
+export default function {{ properCase name }}({ className }: {{ properCase name }}Props) {
+  return (
+    <div className={className}>{{ properCase name }}</div>
+  );
+}

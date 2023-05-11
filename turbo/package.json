@@ -4,18 +4,22 @@
     "build": "turbo run build --parallel",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "plop": "plop --plopfile ./plopfile.js"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-custom": "*",
+    "plop": "^3.1.2",
     "prettier": "^2.5.1",
     "turbo": "^1.9.3"
   },
   "name": "my-turborepo",
-  "packageManager": "yarn@1.22.19",
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "plop-action-copy": "^1.1.0"
+  }
 }
