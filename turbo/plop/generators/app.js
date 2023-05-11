@@ -1,4 +1,5 @@
 const appRootFiles = [
+  'app/layout.tsx',
   '.eslintrc.js',
   'next.config.js',
   'next-env.d.ts',
@@ -7,14 +8,16 @@ const appRootFiles = [
 ];
 const rootFilesCopy = appRootFiles.map(file => ({
   type: "copy",
-  src: "plop/templates/turbo-app/" + file,
-  dest: "app/{{dashCase name}}/" + file,
+  src: "./plop/templates/turbo-app/" + file,
+  dest: "apps/{{dashCase name}}/" + file,
 }));
 
 module.exports = (plop) => {
+  plop.load("plop-action-copy")
+
   plop.setDefaultInclude({generators: true});
   plop.setGenerator('app', {
-    description: 'application controller logic',
+    description: 'Nextjs application',
     prompts: [
       {
         type: "input",
@@ -37,12 +40,12 @@ module.exports = (plop) => {
       {
         type: 'add',
         path: 'apps/{{dashCase name}}/package.json',
-        templateFile: 'plop/templates/turbo-app/package.hbs'
+        templateFile: '../templates/turbo-app/package.hbs'
       },
       {
         type: 'add',
         path: 'apps/{{dashCase name}}/app/page.tsx',
-        templateFile: 'plop/templates/turbo-app/app/page.hbs'
+        templateFile: '../templates/turbo-app/app/page.hbs'
       },
       /**
        * Copy base app files

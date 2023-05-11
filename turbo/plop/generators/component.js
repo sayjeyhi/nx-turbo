@@ -4,9 +4,6 @@ const getImports = require('../utils/get-imports');
 const { isEmpty } = require('validator');
 
 module.exports = (plop) => {
-  const rootDir = plop.getDestBasePath();
-  const componentDirectories = fs.readdirSync(`${rootDir}/src/components`);
-
   plop.load('../helpers/importList.js');
   plop.setPrompt('checkbox-plus', checkboxPlus);
 
@@ -23,7 +20,7 @@ module.exports = (plop) => {
         type: 'list',
         name: 'componentDirectory',
         message: 'Select component directory',
-        choices: componentDirectories,
+        choices: ['a', 'b'],
         validate: (value) => !isEmpty(value) || 'Required',
       },
       {
