@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "build": "turbo run build --parallel",
+    "build:changed": "turbo-ignore run build --parallel",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
@@ -24,6 +25,7 @@
     "glob": "^10.2.3",
     "inquirer-checkbox-plus-prompt": "^1.4.2",
     "plop-action-copy": "^1.1.0",
+    "turbo-ignore": "^1.9.3",
     "validator": "^13.9.0"
   }
 }
